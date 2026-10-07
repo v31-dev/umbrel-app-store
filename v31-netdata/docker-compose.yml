@@ -12,6 +12,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/lib:/var/lib/netdata
       - ${APP_DATA_DIR}/data/cache:/var/cache/netdata
+      - ${APP_DATA_DIR}/netdata.conf:/etc/netdata/netdata.conf:ro
       - /:/host/root:ro,rslave
       - /etc/passwd:/host/etc/passwd:ro
       - /etc/group:/host/etc/group:ro

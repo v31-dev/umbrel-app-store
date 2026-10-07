@@ -16,7 +16,7 @@ support: https://github.com/v31-dev/umbrel-app-store
 gallery: []
 releaseNotes: ""
 dependencies: []
-path: ""
+path: /v3
 defaultUsername: ""
 defaultPassword: ""
 permissions:
