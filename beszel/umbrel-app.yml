@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: v31-beszel
+name: Beszel
+tagline: Simple, lightweight server monitoring
+icon: https://www.beszel.dev/icon.svg
+category: Development
+version: "1.0.0"
+port: 8090
+description: ""
+developer: henrygd
+website: https://beszel.dev
+submitter: ""
+submission: ""
+repo: https://github.com/henrygd/beszel
+support: ""
+gallery: []
+releaseNotes: ""
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

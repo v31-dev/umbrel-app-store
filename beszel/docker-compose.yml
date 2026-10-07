@@ -1,0 +1,22 @@
+services:
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: v31-beszel_hub_1
+      APP_PORT: 8090
+
+  hub:
+    image: henrygd/beszel:0.21
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/hub:/beszel_data
+
+  agent:
+    image: henrygd/beszel-agent:0.21
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ${APP_DATA_DIR}/agent:/var/lib/beszel-agent
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      KEY: "<public key from the hub>"
