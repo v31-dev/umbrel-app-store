@@ -1,13 +1,6 @@
 services:
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: v31-netdata
-      APP_PORT: 19999
-
   netdata:
-    image: netdata/netdata
-    container_name: netdata
+    image: netdata/netdata:v2.12.0
     pid: host
     network_mode: host
     restart: unless-stopped
@@ -17,9 +10,8 @@ services:
     security_opt:
       - apparmor:unconfined
     volumes:
-      - netdataconfig:/etc/netdata
-      - netdatalib:/var/lib/netdata
-      - netdatacache:/var/cache/netdata
+      - ${APP_DATA_DIR}/data/lib:/var/lib/netdata
+      - ${APP_DATA_DIR}/data/cache:/var/cache/netdata
       - /:/host/root:ro,rslave
       - /etc/passwd:/host/etc/passwd:ro
       - /etc/group:/host/etc/group:ro
@@ -30,8 +22,3 @@ services:
       - /var/log:/host/var/log:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /run/dbus:/run/dbus:ro
-
-volumes:
-  netdataconfig:
-  netdatalib:
-  netdatacache:

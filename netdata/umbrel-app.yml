@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: v31-netdata
+id: netdata
 name: Netdata
 tagline: Server Monitor
 icon: https://www.netdata.cloud/favicon-32x32.png
 category: Development
-version: "1.0.0"
+version: "v2.12.0"
 port: 19999
 description: ""
 developer: Netdata
@@ -19,3 +19,4 @@ dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+permissions: [GPU]
