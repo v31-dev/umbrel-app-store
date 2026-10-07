@@ -2,7 +2,7 @@ manifestVersion: 1
 id: v31-netdata
 name: Netdata
 tagline: Server Monitor
-icon: https://www.netdata.cloud/favicon-32x32.png
+icon: https://www.netdata.cloud/img/netdata-logo.svg
 category: Development
 version: "v2.12.0"
 port: 19999
