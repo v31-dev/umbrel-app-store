@@ -19,4 +19,7 @@ dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-permissions: [GPU]
+permissions:
+  - GPU
+backupIgnore:
+  - data/cache/*
