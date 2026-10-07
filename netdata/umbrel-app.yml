@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: v31-netdata
+name: Netdata
+tagline: Server Monitor
+icon: https://www.netdata.cloud/favicon-32x32.png
+category: Development
+version: "1.0.0"
+port: 19999
+description: ""
+developer: Netdata
+website: https://www.netdata.cloud
+submitter: ""
+submission: ""
+repo: https://github.com/netdata/netdata
+support: https://github.com/v31-dev/umbrel-app-store
+gallery: []
+releaseNotes: ""
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
